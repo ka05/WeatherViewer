@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal" android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <fragment class="com.example.clay.weatherviewer.CitiesFragment"
+              android:id="@+id/cities" android:layout_weight="3"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"/>
+    <FrameLayout android:layout_width="8dp"
+                 android:layout_height="match_parent"
+                 android:background="@android:color/black"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/current_tab"
+            android:id="@+id/currentForecast"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="20dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/tab_underline"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/five_day_tab"
+            android:id="@+id/fiveDayForecast"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/currentForecast"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/tab_underline"
+            />
+
+        <FrameLayout android:id="@+id/forecast_replacer"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:background="@android:color/white"
+                     android:layout_below="@+id/currentForecast"
+                     android:paddingTop="10dp"
+            >
+
+        </FrameLayout>
+
+    </RelativeLayout>
+</LinearLayout>
